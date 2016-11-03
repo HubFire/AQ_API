@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from djsonp import JSONPResponse,get_callback
 import json
 from api.models import *
-
+import os
 def index(request):
     response_data = {}
     response_data['result'] = 'failed'
@@ -27,4 +27,8 @@ def getStockList(request):
         result['data']=data
         return JSONPResponse(result, callback=request.GET['callback'])
 
+def getPicture(request):
+    name=request.GET['name']
+    f=open('/root/Desktop/AQ_API/templates/img/'+name+'.jpg','rb')
+    return HttpResponse(f.read(),content_type='img/jpeg')
 

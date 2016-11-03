@@ -22,5 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',api_views.index),
     url(r'^getDayHistory/',api_views.getDayHistory),
-    url(r'^getStockList/',api_views.getStockList),
+    url(r'^getPicture/',api_views.getPicture),
+
+
 ]
