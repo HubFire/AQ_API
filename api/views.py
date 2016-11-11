@@ -39,4 +39,12 @@ def getIndexList(request):
         result['data']=data
     return JSONPResponse(result, callback=request.GET['callback'])
 
+def getHotStock(request):
+    data=m_getHotStock()
+    result = {}
+    if (len(data) > 0):
+        result['data'] = data
+    return JSONPResponse(result, callback=request.GET['callback'])
+
+
 

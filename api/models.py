@@ -42,3 +42,8 @@ def m_getIndexList():
     index_today_col =client.index.index_today
     data = index_today_col.find({},{'_id': 0}).sort([('code', 1)])
     return list(data)
+
+def m_getHotStock():
+    hotStock_col= client.recommend.hot_stock
+    data = hotStock_col.find({},{'_id': 0})
+    return list(data)

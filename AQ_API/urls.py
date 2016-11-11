@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^getDayHistory/',api_views.getDayHistory),
     url(r'^getPicture/',api_views.getPicture),
     url(r'^getIndexList/',api_views.getIndexList),
+    url(r'^getHotStock/',api_views.getHotStock),
 
 
 ]
