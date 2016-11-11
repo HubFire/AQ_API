@@ -32,3 +32,11 @@ def getPicture(request):
     f=open('/root/Desktop/AQ_API/templates/img/'+name+'.jpg','rb')
     return HttpResponse(f.read(),content_type='img/jpeg')
 
+def getIndexList(request):
+    data = m_getIndexList()
+    result = {}
+    if (len(data)>0):
+        result['data']=data
+    return JSONPResponse(result, callback=request.GET['callback'])
+
+

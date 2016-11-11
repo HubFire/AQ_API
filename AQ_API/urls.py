@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$',api_views.index),
     url(r'^getDayHistory/',api_views.getDayHistory),
     url(r'^getPicture/',api_views.getPicture),
+    url(r'^getIndexList/',api_views.getIndexList),
 
 
 ]

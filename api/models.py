@@ -36,3 +36,9 @@ def push(title,alert,builder_id=None,extras=None):
         raise jpush.JPushFailure('Jpush failure')
     except:
         print ('push error')
+
+def m_getIndexList():
+
+    index_today_col =client.index.index_today
+    data = index_today_col.find({},{'_id': 0}).sort([('code', 1)])
+    return list(data)
